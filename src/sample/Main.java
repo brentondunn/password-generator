@@ -30,34 +30,27 @@ public class Main extends Application {
         // input password length
         TextField passwordLength = new TextField();
         passwordLength.setPromptText("5-20");
-        passwordLength.setStyle("-fx-background-radius: 0; -fx-background-color: #5e6472; -fx-text-fill: white");
+        passwordLength.setStyle("-fx-background-radius: 0; -fx-background-color: #2a9d8f; -fx-text-fill: white");
 
         // displays error
         errorLabel = new Label();
-        errorLabel.setStyle("-fx-text-fill: #ff0000; -fx-font-size: 7pt;");
+        errorLabel.setStyle("-fx-text-fill: #fca49a; -fx-font-size: 9pt");
 
         // left side labels
         Label enterChar = new Label("Enter password length: ");
-        enterChar.setStyle("-fx-font-size: 15;");
         Label uppercase = new Label("Uppercase");
-        uppercase.setStyle("-fx-font-size: 15;");
         Label symbols = new Label("Symbols");
-        symbols.setStyle("-fx-font-size: 15;");
         Label numbers = new Label("Numbers");
-        numbers.setStyle("-fx-font-size: 15;");
         Label passwordLabel = new Label("New password: ");
-        passwordLabel.setStyle("-fx-font-size: 15;");
 
         // checkboxes
         CheckBox wantUpperCase = new CheckBox();
-        wantUpperCase.setStyle("-fx-selected-box-color: lime; -fx-box-color: red; -fx-mark-color: #5e6472;");
         CheckBox wantSymbols = new CheckBox();
         CheckBox wantNumbers = new CheckBox();
 
         // button to generate password
         Button generatePassword = new Button("Generate Password");
         generatePassword.setOnAction(e -> getUserInput(passwordLength, wantUpperCase, wantSymbols, wantNumbers));
-        generatePassword.setStyle("-fx-background-radius: 0; -fx-background-color: #aed9e0;");
 
         // shows password
         passwordOutput = new Label();
@@ -66,7 +59,6 @@ public class Main extends Application {
         // button to copy to clipboard
         Button copyPassword = new Button("Copy to Clipboard");
         copyPassword.setOnAction(e -> copyToClipboard());
-        copyPassword.setStyle("-fx-background-radius: 0; -fx-background-color: #aed9e0;");
 
         // grid stuff
         GridPane grid = new GridPane();
@@ -90,6 +82,7 @@ public class Main extends Application {
 
         // random end of code stuff
         Scene scene = new Scene(grid);
+        scene.getStylesheets().add("style.css");
         window.setScene(scene);
         window.show();
     }
