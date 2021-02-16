@@ -2,7 +2,7 @@ package sample;
 
 public class Password {
 
-    // instance variavles
+    // instance variables
     private Boolean wantUpperCase;
     private Boolean wantSymbols;
     private Boolean wantNumbers;
