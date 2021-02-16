@@ -1,6 +1,16 @@
 .root {
-    -fx-background-color: aqua;
+    -fx-background-color: #264653;
 }
 .label {
-    fx-font-size: 50;
+    -fx-font-family: "Lato Black";
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+}
+.button {
+    -fx-background-color: #e9c46a;
+    -fx-font-family: "Lato Black";
+    -fx-background-radius: 0;
+}
+.text-field {
+    -fx-font-family: "Lato Black";
 }
